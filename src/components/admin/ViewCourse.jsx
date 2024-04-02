@@ -7,7 +7,7 @@ export default function ViewCourses() {
 
     useEffect(() => {
         axios
-        .get("http://localhost:9000/admin/course-list")
+        .get("https://felix-app-backend.onrender.com/admin/course-list")
         .then((res) => {
             setCourses(res.data.courses)
         })

@@ -22,7 +22,7 @@ export default function LoginPage() {
 
         if(document.getElementById('whoami').value == "admin") {
             axios
-            .post("http://localhost:9000/admin/login", inputs)
+            .post("https://felix-app-backend.onrender.com/admin/login", inputs)
             .then((res) => {
                 alert(res.data.message);
                 // console.log(res.data.user);
@@ -39,7 +39,7 @@ export default function LoginPage() {
         if(document.getElementById('whoami').value == "instructor") {
             console.log("instructor login");
             axios
-            .post("http://localhost:9000/instructor/login", inputs)
+            .post("https://felix-app-backend.onrender.com/instructor/login", inputs)
             .then((res) => {
                 alert(res.data.message);
                 sessionStorage.setItem("info", JSON.stringify(res.data.user))

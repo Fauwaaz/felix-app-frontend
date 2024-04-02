@@ -14,7 +14,7 @@ export default function AddCourse() {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-        .post("http://localhost:9000/admin/add-course", inputs)
+        .post("https://felix-app-backend.onrender.com/admin/add-course", inputs)
         .then((res) => {
             alert(res.data.message);
         })

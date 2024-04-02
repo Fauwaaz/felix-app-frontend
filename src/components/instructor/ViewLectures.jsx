@@ -9,7 +9,7 @@ export default function ViewLectures() {
     
     useEffect(() => {
         axios
-        .get(`http://localhost:9000/instructor/allocated-lecture-list/${info.name}`)
+        .get(`https://felix-app-backend.onrender.com/instructor/allocated-lecture-list/${info.name}`)
         .then((res) => {
             setLectures(res.data.lectures)
         })

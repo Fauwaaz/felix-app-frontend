@@ -10,13 +10,13 @@ export default function AllocateLecture() {
 
     useEffect(() => {
         axios
-        .get("http://localhost:9000/admin/instructor-list")
+        .get("https://felix-app-backend.onrender.com/admin/instructor-list")
         .then((res) => {
             setInstructors(res.data.instructors)
         })
 
         axios
-        .get("http://localhost:9000/admin/course-list")
+        .get("https://felix-app-backend.onrender.com/admin/course-list")
         .then((res) => {
             setCourses(res.data.courses)
         })
@@ -39,7 +39,7 @@ export default function AllocateLecture() {
         e.preventDefault()
 
         axios
-        .post("http://localhost:9000/admin/allocate-lecture", inputs)
+        .post("https://felix-app-backend.onrender.com/admin/allocate-lecture", inputs)
         .then((res) => {
             // console.log(res.data.message);
             alert(res.data.message)

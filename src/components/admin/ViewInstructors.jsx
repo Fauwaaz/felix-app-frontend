@@ -7,7 +7,7 @@ export default function ViewInstructors() {
 
     useEffect(() => {
         axios
-        .get("http://localhost:9000/admin/instructor-list")
+        .get("https://felix-app-backend.onrender.com/admin/instructor-list")
         .then((res) => {
             setInstructors(res.data.instructors)
         })

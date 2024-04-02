@@ -14,7 +14,7 @@ export default function AddInstructor() {
     const handleSubmit = (e) => {
         e.preventDefault();
         axios
-        .post("http://localhost:9000/admin/add-instructor", inputs)
+        .post("https://felix-app-backend.onrender.com/admin/add-instructor", inputs)
         .then((res) => {
             alert(res.data.message);
         })
